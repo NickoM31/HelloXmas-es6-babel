@@ -1,17 +1,16 @@
-// let hello = ()=>{
-// 	let person = 'Père Noel'{
-// console.log('bonjour' + person);
-// }
-// hello('nico');
-// hello();
+let tab = [];
 let validText = document.getElementById('btnText');
-console.log(validText);
 validText.addEventListener("click",(event)=>{
-	console.log('sa click');
 	let inputValue = document.getElementById('inputText').value;
-	console.log(inputValue);
-	let html = document.getElementById('prev');
-	html.innerHTML = inputValue;
+	let ul = document.getElementById('list');
+	let li = document.createElement("li");
+	ul.appendChild(li);
+	li.innerHTML = inputValue;
+	if(inputValue === ""){
+		li.innerHTML = "Père Noël!";
+	}
+	tab.push(inputValue);
+	console.log(tab);
 });
 
 
